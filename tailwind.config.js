@@ -7,6 +7,16 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  daisyui:{
+    themes: [{
+      defaultTheme: {
+        primary:'#f8f9fa',
+        secondary:'red'
+      }
+    }]
+  },
+  plugins: [
+    require("daisyui")
+  ],
 }
 

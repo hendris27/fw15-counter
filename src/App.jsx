@@ -1,23 +1,17 @@
-import { useState } from 'react'
+import React from 'react'
 
+import Counter from './components/Counter'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [num, setNum] = React.useState(0)
+ 
   return (
     <>
-      
-     
-      <div className="bg-red-100 flex flex-row h-screen justify-center items-center" >
-        <button className='bg-green-400 w-[50px] h-[50px]' onClick={() => setCount((count) => count + 1)}>+
-        </button>
-        <div className='bg-red-100 w-[50px] h-[50px] text-center justify-center'>{count}</div>
-        <button  className='bg-green-400 w-[50px] h-[50px]' onClick={() => setCount((count) => count - 1)}>-
-        </button>
-        
-    
-       
-    
+      <div className="bg-green-500 flex flex-col h-screen justify-center items-center gap-4" >
+      <div className="bg-gray-700 w-[40px] h-[35px] flex justify-center items-center text-white rounded-[10px]">
+      {num}
+      </div>
+     <Counter onChangeNumber={setNum}/>
       </div>
     
     </>
